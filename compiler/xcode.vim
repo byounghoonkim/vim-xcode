@@ -22,16 +22,16 @@ set cpo-=C
 CompilerSet makeprg=xcodebuild\ $*
 
 CompilerSet errorformat=
-      \%f:%l:%c:{%*[^}]}:\ error:\ %m,
-      \%f:%l:%c:{%*[^}]}:\ fatal\ error:\ %m,
-      \%f:%l:%c:{%*[^}]}:\ warning:\ %m,
-      \%f:%l:%c:\ error:\ %m,
-      \%f:%l:%c:\ fatal\ error:\ %m,
-      \%f:%l:%c:\ warning:\ %m,
-      \%f:%l:\ Error:\ %m,
-      \%f:%l:\ error:\ %m,
-      \%f:%l:\ fatal\ error:\ %m,
-      \%f:%l:\ warning:\ %m
+      \%E%f:%l:%c:{%*[^}]}:\ error:\ %m,
+      \%E%f:%l:%c:{%*[^}]}:\ fatal\ error:\ %m,
+      \%W%f:%l:%c:{%*[^}]}:\ warning:\ %m,
+      \%E%f:%l:%c:\ error:\ %m,
+      \%E%f:%l:%c:\ fatal\ error:\ %m,
+      \%W%f:%l:%c:\ warning:\ %m,
+      \%E%f:%l:\ Error:\ %m,
+      \%E%f:%l:\ error:\ %m,
+      \%E%f:%l:\ fatal\ error:\ %m,
+      \%W%f:%l:\ warning:\ %m
 
 "      \%+E%f:%l:%c:\ error:\ %m,
 "      \%W%f:%l:%c:\ note:\ %m,
